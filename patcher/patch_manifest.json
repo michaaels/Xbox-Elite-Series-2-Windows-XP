@@ -1,0 +1,51 @@
+{
+  "format_version": 1,
+  "description": "Binary patch manifest: Microsoft xb1usb.sys 6.2.11059.0 (2014 x86) -> experimentally validated Xbox Elite Series 2 Windows XP TEST2M payload.",
+  "input": {
+    "filename": "xb1usb.sys",
+    "size": 29408,
+    "sha256": "bd4cb415a34022ac01e5b8f4915735be421958e8534258c86f9805652736c73f"
+  },
+  "output": {
+    "filename": "xboxelite2xp.sys",
+    "size": 29408,
+    "sha256": "1fe18559ae33e46694669556177cdacf1b39f104fa9760d5563696dffd4fa649"
+  },
+  "patch_count": 34,
+  "patches": [
+    {"offset":296,"original":"2c89","patched":"23d6"},
+    {"offset":664,"original":"10","patched":"c2"},
+    {"offset":692,"original":"40","patched":"60"},
+    {"offset":695,"original":"42","patched":"68"},
+    {"offset":2640,"original":"5f","patched":"e9"},
+    {"offset":2642,"original":"5bc3cccccccccccc","patched":"8e00009090909090"},
+    {"offset":2803,"original":"83e8190f85be000000","patched":"e98e8d000090909090"},
+    {"offset":2980,"original":"120a","patched":"688c"},
+    {"offset":4275,"original":"48","patched":"44"},
+    {"offset":4689,"original":"38","patched":"34"},
+    {"offset":8128,"original":"37","patched":"29"},
+    {"offset":10533,"original":"38","patched":"34"},
+    {"offset":10730,"original":"38","patched":"34"},
+    {"offset":19251,"original":"150026ffff350046ffff950275108102c0a1000932150026ffff350046ffff950175108102c005091901290a950a75","patched":"8102c0a100093295018102c005091901290a150025017501950a810205010939150125083500463b10660e00750495"},
+    {"offset":19300,"original":"0205010939150125083500463b10660e00","patched":"427502950181030509190b290e15002501"},
+    {"offset":19318,"original":"04","patched":"01"},
+    {"offset":19320,"original":"01","patched":"04"},
+    {"offset":19322,"original":"42","patched":"02"},
+    {"offset":19324,"original":"02","patched":"04"},
+    {"offset":19332,"original":"02","patched":"01"},
+    {"offset":20048,"original":"0b","patched":"09"},
+    {"offset":20056,"original":"b0","patched":"8c"},
+    {"offset":23056,"original":"00000000000000","patched":"5589e55689ce6a"},
+    {"offset":23064,"original":"000000000000000000000000000000","patched":"89f1e89b7dffff83ec08c704240520"},
+    {"offset":23080,"original":"000000000000000000","patched":"0fc6442404068a86a1"},
+    {"offset":23092,"original":"000000000000000000","patched":"88442402fec08886a1"},
+    {"offset":23104,"original":"0000000000000000000000000000000000000000000000","patched":"8d14246a0589f1e8da7bffff83c40883ec08c704244d10"},
+    {"offset":23128,"original":"00000000000000","patched":"0266c744240407"},
+    {"offset":23136,"original":"000000","patched":"8a86a1"},
+    {"offset":23142,"original":"000000000000000000","patched":"88442402fec08886a1"},
+    {"offset":23154,"original":"00000000000000000000000000000000000000","patched":"8d14246a0689f1e8a87bffff83c4085ec9c204"},
+    {"offset":23174,"original":"000000000000000000000000000000000000000000000000000000000000","patched":"83f819741e83f805751e837d08147218807b031072128a4312240f8887da"},
+    {"offset":23207,"original":"000000000000000000000000000000","patched":"eb05e94e72ffffe90773ffff8a83da"},
+    {"offset":23225,"original":"000000000000000000","patched":"240f88470c5f5e5bc3"}
+  ]
+}
