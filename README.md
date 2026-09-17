@@ -31,31 +31,36 @@ Wireless, Bluetooth, Windows XP x64, other Xbox PIDs and other firmware revision
 
 A recorded validation session produced 0 XInput errors, 0 RAW errors, buttons `10/10`, paddles `4/4`, POV `8/8`, full LT/RT values, and essentially full stick range. See [`validation/`](validation/).
 
-## Control Center v1.5
+## Downloads
 
-The repository now includes the Control Center package:
+Compiled end-user binaries are intended to live in the **GitHub v1.0 Release**, not inside the source tree.
 
-- [`control-center/README.md`](control-center/README.md) — features and build/runtime notes
-- [`control-center/ControlCenter_v1.5.zip`](control-center/ControlCenter_v1.5.zip) — downloadable package containing the GUI, local XInput bridge DLLs, INI, source and build script
-
-Reference SHA-256 for the ZIP:
+The v1.0 Release should contain these two primary assets:
 
 ```text
-3f33330313c3451f149e7a3a0d7d900e25aa98ab95e750e08b694ca8c4d418d7
+Xbox_Elite_Series2_XP_Driver_v1.0.zip
+XboxElite2ControlCenter_v1.5.exe
 ```
 
-Inside the package:
+Reference hashes for the validated assets:
 
 ```text
-XboxElite2ControlCenter.exe
-XboxElite2ControlCenter.cpp
-XInputBridgeXP.ini
-xinput1_3.dll
-xinput9_1_0.dll
-BUILD_LINUX_CLANG.sh
-INICIAR_CONTROL_CENTER.bat
-LEEME.txt
+Xbox_Elite_Series2_XP_Driver_v1.0.zip
+SHA-256: 864c3b7d7171f1a1da7976feb58a8046e36bf1670f1be09011cebe61a5054a08
+
+XboxElite2ControlCenter_v1.5.exe
+SHA-256: eea2c2660f723083990890dedcfbe6503cdd03a1e252a53e9ba9cf4872197f0c
 ```
+
+## Control Center v1.5 source
+
+The [`control-center/`](control-center/) directory is source-only. The complete Control Center source is under:
+
+- [`control-center/src/XboxElite2ControlCenter.cpp`](control-center/src/XboxElite2ControlCenter.cpp)
+- [`control-center/src/parts/`](control-center/src/parts/) — ordered source fragments included by the wrapper
+- [`control-center/src/imports_gui.s`](control-center/src/imports_gui.s)
+- [`control-center/src/BUILD_LINUX_CLANG.sh`](control-center/src/BUILD_LINUX_CLANG.sh)
+- [`control-center/src/XInputBridgeXP.ini`](control-center/src/XInputBridgeXP.ini)
 
 The Games screen lets you choose any game `.exe`, install the local bridge into that game folder, and apply the current rear-paddle mapping. The game list is not hard-coded to GTA.
 
@@ -106,7 +111,7 @@ The patcher validates the input SHA, applies the exact byte ranges from [`patch_
 ```text
 patcher/         exact reproducible binary patch
 driver/          clean XP INF (SYS intentionally generated locally)
-control-center/  GUI diagnostic/remapping tool and downloadable package
+control-center/  Control Center source only
 installer/       XP installer script
 src/             setup helper / other project source
 docs/            reverse-engineering and protocol documentation
