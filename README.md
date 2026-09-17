@@ -31,6 +31,34 @@ Wireless, Bluetooth, Windows XP x64, other Xbox PIDs and other firmware revision
 
 A recorded validation session produced 0 XInput errors, 0 RAW errors, buttons `10/10`, paddles `4/4`, POV `8/8`, full LT/RT values, and essentially full stick range. See [`validation/`](validation/).
 
+## Control Center v1.5
+
+The repository now includes the Control Center package:
+
+- [`control-center/README.md`](control-center/README.md) — features and build/runtime notes
+- [`control-center/ControlCenter_v1.5.zip`](control-center/ControlCenter_v1.5.zip) — downloadable package containing the GUI, local XInput bridge DLLs, INI, source and build script
+
+Reference SHA-256 for the ZIP:
+
+```text
+3f33330313c3451f149e7a3a0d7d900e25aa98ab95e750e08b694ca8c4d418d7
+```
+
+Inside the package:
+
+```text
+XboxElite2ControlCenter.exe
+XboxElite2ControlCenter.cpp
+XInputBridgeXP.ini
+xinput1_3.dll
+xinput9_1_0.dll
+BUILD_LINUX_CLANG.sh
+INICIAR_CONTROL_CENTER.bat
+LEEME.txt
+```
+
+The Games screen lets you choose any game `.exe`, install the local bridge into that game folder, and apply the current rear-paddle mapping. The game list is not hard-coded to GTA.
+
 ## Why the Microsoft driver did not start on XP
 
 The 2014 package is a KMDF 1.11 driver and its MSI targets Windows 7+. XP supports KMDF 1.9. Simply changing the INF or the WDF bind version was not enough: two KMDF structures changed size between the versions.
@@ -76,14 +104,14 @@ The patcher validates the input SHA, applies the exact byte ranges from [`patch_
 ## Repository map
 
 ```text
-patcher/        exact reproducible binary patch
- driver/        clean XP INF (SYS intentionally generated locally)
- installer/     XP installer script
- src/           Control Center and setup helper source
- bin/           project-owned user-mode binaries
- docs/          reverse-engineering and protocol documentation
- validation/    sanitized successful test summary
- third-party/   integration notes (GInput / Chimera are not bundled)
+patcher/         exact reproducible binary patch
+driver/          clean XP INF (SYS intentionally generated locally)
+control-center/  GUI diagnostic/remapping tool and downloadable package
+installer/       XP installer script
+src/             setup helper / other project source
+docs/            reverse-engineering and protocol documentation
+validation/      sanitized successful test summary
+third-party/     integration notes (GInput / Chimera are not bundled)
 ```
 
 ## Installation on XP
