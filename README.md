@@ -53,6 +53,7 @@ SHA-256: eea2c2660f723083990890dedcfbe6503cdd03a1e252a53e9ba9cf4872197f0c
 ```
 
 ## Control Center v1.5 source
+<img width="717" height="411" alt="image" src="https://github.com/user-attachments/assets/10fdd3a0-982d-46c1-a289-f9ff6b62dede" />
 
 The [`control-center/`](control-center/) directory is source-only. The complete Control Center source is under:
 
